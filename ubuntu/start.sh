@@ -70,12 +70,14 @@ source $HOME/.bashrc
 mkdir -p $HOME/catkin_ws/src
 cd $HOME/catkin_ws/src
 git clone https://github.com/pal-robotics/aruco_ros   # arco
-git clone https://github.com/OneNightROBOCON/burger_war # onenightrobocon
-git clone https://github.com/tysik/obstacle_detector.git # obstacle detector
+git clone https://github.com/kyad/burger_war
 cd $HOME/catkin_ws
 catkin build
 echo "source ~/catkin_ws/devel/setup.bash" >> $HOME/.bashrc
 source $HOME/.bashrc
+
+cd $HOME/catkin_ws/src/burger_war
+pip install -r requirements.txt
 
 #コンテナを起動し続ける
 #tail -f /dev/null

@@ -1,5 +1,5 @@
 FROM dorowu/ubuntu-desktop-lxde-vnc:bionic
-LABEL maintainer="seigot<s.takada.3o3@gmail.com>"
+LABEL maintainer="kyad<53517611+kyad@users.noreply.github.com>"
 
 RUN apt-get update -q && \
     apt-get upgrade -yq && \
@@ -36,7 +36,8 @@ RUN apt-get update ;\
     lsb-release \
     terminator \
     gnome-terminal \
-    emacs25;
+    emacs25 \
+    screen;
 
 # turtlebot3
 RUN apt-get update ;\
