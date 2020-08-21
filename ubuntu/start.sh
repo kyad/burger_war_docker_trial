@@ -77,6 +77,7 @@ echo "source ~/catkin_ws/devel/setup.bash" >> $HOME/.bashrc
 source $HOME/.bashrc
 
 cd $HOME/catkin_ws/src/burger_war
+pip install install --upgrade pip
 pip install -r requirements.txt
 
 #コンテナを起動し続ける
