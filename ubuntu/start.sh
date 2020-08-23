@@ -28,14 +28,14 @@ function install_package(){
     sudo apt install -y ros-melodic-dwa-local-planner
     sudo apt install -y ros-melodic-jsk-rviz-plugins
     sudo apt install -y ros-melodic-smach*
-    sudo apt install -y libarmadillo-dev #libarmadillo6
+    sudo apt install -y libarmadillo-dev libarmadillo6
     
     ###
     sudo apt install -y ros-melodic-libg2o
     sudo apt install -y libopencv-dev
     sudo apt install -y ros-melodic-costmap-converter
     sudo apt install -y libsuitesparse-dev
-    sudo apt install -y libarmadillo-dev #libarmadillo6
+    sudo apt install -y libarmadillo-dev libarmadillo6
     ###--->
 }
 install_package
@@ -69,8 +69,9 @@ source $HOME/.bashrc
 
 mkdir -p $HOME/catkin_ws/src
 cd $HOME/catkin_ws/src
-git clone https://github.com/pal-robotics/aruco_ros   # arco
+git clone https://github.com/pal-robotics/aruco_ros --branch 0.2.4 --depth 1  # arco
 git clone https://github.com/kyad/burger_war
+git clone https://github.com/tysik/obstacle_detector.git --branch bd59d405b2284f05c46f7b99cb9cb4247934e2ff --depth 1  # obstacle detector
 cd $HOME/catkin_ws
 catkin build
 echo "source ~/catkin_ws/devel/setup.bash" >> $HOME/.bashrc
