@@ -71,7 +71,8 @@ mkdir -p $HOME/catkin_ws/src
 cd $HOME/catkin_ws/src
 git clone https://github.com/pal-robotics/aruco_ros --branch 0.2.4 --depth 1  # arco
 git clone https://github.com/kyad/burger_war
-git clone https://github.com/tysik/obstacle_detector.git --branch bd59d405b2284f05c46f7b99cb9cb4247934e2ff --depth 1  # obstacle detector
+git clone https://github.com/tysik/obstacle_detector.git # obstacle detector
+git -C obstacle_detector checkout bd59d405b2284f05c46f7b99cb9cb4247934e2ff
 cd $HOME/catkin_ws
 catkin build
 echo "source ~/catkin_ws/devel/setup.bash" >> $HOME/.bashrc
